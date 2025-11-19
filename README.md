@@ -1,52 +1,195 @@
-# MERN Stack Capstone Project
+# 🐛 MERN Bug Tracker - Capstone Project
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+A full-stack bug tracking application with user authentication, CRUD operations, and real-time updates.
 
-## Assignment Overview
+## 🚀 Live Application
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+| Component | URL |
+|-----------|-----|
+| **Frontend** | https://bug-tracker-frontend-xxxxx.vercel.app |
+| **Backend API** | https://bug-tracker-backend-1xle.onrender.com |
+| **API Health** | https://bug-tracker-backend-1xle.onrender.com/api/health |
 
-## Getting Started
+## 🔐 Demo Credentials
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+- **Email**: demo@test.com
+- **Password**: password123
 
-## Files Included
+Or create a new account with Register button!
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+## ✨ Features
 
-## Requirements
+✅ **User Authentication** - Secure login and registration
+✅ **Bug Management** - Create, read, update, delete bugs
+✅ **Dashboard** - View all bugs in real-time
+✅ **Responsive Design** - Works on all devices
+✅ **Professional UI** - Modern, clean interface
+✅ **Error Handling** - Comprehensive error messages
+✅ **MongoDB Backend** - Scalable database
+✅ **Express API** - RESTful API design
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+## 🛠️ Tech Stack
 
-## Project Ideas
+### Frontend
+- React 18
+- CSS3 with responsive design
+- Axios for API calls
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+### Backend
+- Node.js + Express.js
+- MongoDB with Mongoose
+- Authentication middleware
+- Error handling
 
-## Submission
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## 📁 Project Structure
+```
+mern-final-project/
+├── client/           # React frontend
+│   ├── src/
+│   │   ├── pages/   # Login, Register, Dashboard
+│   │   ├── components/ # BugCard, BugList, BugForm
+│   │   └── App.js
+│   └── package.json
+│
+├── server/          # Express backend
+│   ├── src/
+│   │   ├── routes/  # Auth, Bugs
+│   │   ├── models/  # Bug model
+│   │   ├── controllers/
+│   │   └── app.js
+│   └── package.json
+│
+└── README.md
+```
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+## 🎓 Learning Outcomes
 
-## Resources
+This capstone project demonstrates:
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+### Backend Skills
+- ✅ RESTful API design
+- ✅ User authentication
+- ✅ MongoDB integration
+- ✅ Error handling & validation
+- ✅ Middleware implementation
+
+### Frontend Skills
+- ✅ React hooks & state management
+- ✅ Form handling & validation
+- ✅ API integration
+- ✅ Responsive design
+- ✅ Professional UI/UX
+
+### DevOps Skills
+- ✅ Git & GitHub
+- ✅ Deployment (Vercel & Render)
+- ✅ Environment management
+- ✅ CI/CD ready
+
+## 🚀 Getting Started Locally
+
+### Prerequisites
+- Node.js 18+
+- MongoDB (local or Atlas)
+
+### Installation
+```bash
+# Install dependencies
+npm run install-all
+
+# Start development servers
+npm run dev
+
+# Frontend: http://localhost:3000
+# Backend: http://localhost:5000
+```
+
+### Environment Variables
+
+**server/.env**
+```
+MONGODB_URI=mongodb+srv://...
+NODE_ENV=development
+PORT=5000
+```
+
+**client/.env**
+```
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+## 📊 Capstone Requirements
+
+### ✅ Task 1: Project Planning & Design
+- Wireframes created
+- Database schema designed
+- API architecture documented
+- User stories defined
+
+### ✅ Task 2: Backend Development
+- Express.js REST API
+- Authentication system
+- Bug CRUD operations
+- MongoDB integration
+- Error handling
+
+### ✅ Task 3: Frontend Development
+- React UI with components
+- Login/Register pages
+- Dashboard with bug list
+- Real-time API calls
+- Responsive design
+
+### ✅ Task 4: Testing & Quality
+- Jest configuration
+- Unit tests
+- Component tests
+- Error handling tests
+
+### ✅ Task 5: Deployment & Documentation
+- Deployed to production
+- Vercel frontend
+- Render backend
+- Comprehensive README
+- Environment configuration
+
+## 🎯 Future Enhancements
+
+- [ ] User roles (admin, developer)
+- [ ] Bug priorities and categories
+- [ ] Comments on bugs
+- [ ] Real-time notifications
+- [ ] Advanced filtering and search
+- [ ] Analytics dashboard
+
+## 📞 Support
+
+For issues or questions:
+1. Check the README
+2. Review error messages
+3. Check browser console (F12)
+4. Check backend logs
+
+## 👤 Author
+
+Mawunyo Fevlo Mary
+
+## 📅 Project Timeline
+
+- **Started**: October 2025
+- **Completed**: November 2025
+- **Deployed**: November 2025
+
+## 📜 License
+
+This is an educational project for the PLP MERN Stack Development Course.
+
+---
+
+**Status**: ✅ Production Ready
+**Last Updated**: November 2025
