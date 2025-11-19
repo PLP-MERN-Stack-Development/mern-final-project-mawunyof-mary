@@ -6,7 +6,7 @@ A full-stack bug tracking application with user authentication, CRUD operations,
 
 | Component | URL |
 |-----------|-----|
-| **Frontend** | https://bug-tracker-frontend-xxxxx.vercel.app |
+| **Frontend** | https://mern-final-project-mawunyof-mary-git-main-mawunyo-project.vercel.app |
 | **Backend API** | https://bug-tracker-backend-1xle.onrender.com |
 | **API Health** | https://bug-tracker-backend-1xle.onrender.com/api/health |
 
