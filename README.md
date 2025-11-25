@@ -1,195 +1,325 @@
-# 🐛 MERN Bug Tracker - Capstone Project
+# 🐛 Bug Tracker - Full Stack MERN Application
 
-A full-stack bug tracking application with user authentication, CRUD operations, and real-time updates.
+A complete bug tracking application built with MongoDB, Express, React, and Node.js.
 
-## 🚀 Live Application
+## 🎯 Features
 
-| Component | URL |
-|-----------|-----|
-| **Frontend** | https://mern-final-project-mawunyof-mary-git-main-mawunyo-project.vercel.app |
-| **Backend API** | https://bug-tracker-backend-1xle.onrender.com |
-| **API Health** | https://bug-tracker-backend-1xle.onrender.com/api/health |
-
-## 🔐 Demo Credentials
-
-- **Email**: demo@test.com
-- **Password**: password123
-
-Or create a new account with Register button!
-
-## ✨ Features
-
-✅ **User Authentication** - Secure login and registration
-✅ **Bug Management** - Create, read, update, delete bugs
-✅ **Dashboard** - View all bugs in real-time
-✅ **Responsive Design** - Works on all devices
-✅ **Professional UI** - Modern, clean interface
-✅ **Error Handling** - Comprehensive error messages
-✅ **MongoDB Backend** - Scalable database
-✅ **Express API** - RESTful API design
+- ✅ User authentication (login/register)
+- ✅ Create, view, update, and delete bugs
+- ✅ Filter bugs by status and priority
+- ✅ Responsive UI
+- ✅ Secure API with JWT tokens
+- ✅ MongoDB database
+- ✅ Comprehensive testing
 
 ## 🛠️ Tech Stack
 
-### Frontend
+**Frontend:**
 - React 18
-- CSS3 with responsive design
-- Axios for API calls
+- React Router v6
+- Axios
+- CSS3
 
-### Backend
-- Node.js + Express.js
-- MongoDB with Mongoose
-- Authentication middleware
-- Error handling
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
 
-### Deployment
-- Frontend: Vercel
-- Backend: Render
-- Database: MongoDB Atlas
+**Testing:**
+- Jest
+- Supertest
 
-## 📁 Project Structure
+## 📦 Installation
+
+### Prerequisites
+- Node.js (v18 or higher)
+- MongoDB Account (MongoDB Atlas)
+- Git
+
+### Step 1: Clone Repository
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/mern-final-project-mawunyof-mary.git
+cd mern-final-project-mawunyof-mary
 ```
+
+### Step 2: Install Dependencies
+```bash
+npm run install-all
+```
+
+### Step 3: Configure Environment
+
+**Create `server/.env`:**
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/bug-tracker
+PORT=5000
+NODE_ENV=development
+JWT_SECRET=your-secret-key-here-minimum-32-characters
+JWT_EXPIRE=7d
+CORS_ORIGIN=http://localhost:3000
+LOG_LEVEL=debug
+
+**Create `client/.env`:**
+REACT_APP_API_URL=http://localhost:5000/api
+
+## 🚀 Running the Application
+
+### Development Mode
+```bash
+npm run dev
+```
+
+This starts:
+- **Frontend:** http://localhost:3000
+- **Backend:** http://localhost:5000
+
+### Login with Demo Account
+- **Email:** demo@test.com
+- **Password:** password123
+
+## 📚 How to Use
+
+### Create a Bug
+1. Login to the application
+2. Scroll down to "Create New Bug" section
+3. Enter:
+   - Title (e.g., "Login button not working")
+   - Description (e.g., "Button doesn't respond to clicks")
+   - Priority (Low, Medium, High, or Critical)
+4. Click "Create Bug"
+5. Bug appears in the list below
+
+### View Bugs
+- All your bugs display on the dashboard
+- Each bug shows:
+  - Title and description
+  - Priority level (colored badge)
+  - Current status (colored badge)
+
+### Update Bug Status
+1. Find the bug you want to update
+2. Use the dropdown menu on the bug card
+3. Select new status: Open, In Progress, or Closed
+4. Status updates immediately
+
+### Filter Bugs
+1. Go to "Filter Bugs" section
+2. Use dropdowns to filter by:
+   - **Status:** All, Open, In Progress, or Closed
+   - **Priority:** All, Low, Medium, High, or Critical
+3. List updates automatically
+
+### Delete a Bug
+1. Find the bug to delete
+2. Click the red "Delete" button
+3. Confirm deletion
+4. Bug is removed from list
+
+## 🧪 Testing
+
+### Run All Tests
+```bash
+npm test
+```
+
+### Run Backend Tests Only
+```bash
+npm run test:backend
+```
+
+### Run Tests with Coverage
+```bash
+npm run test:backend:coverage
+```
+
+## 📊 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Create new account
+- `POST /api/auth/login` - Login user
+
+### Bugs
+- `GET /api/bugs` - Get all bugs
+- `POST /api/bugs` - Create new bug
+- `PUT /api/bugs/:id` - Update bug
+- `DELETE /api/bugs/:id` - Delete bug
+
+**Full API documentation:** See `server/API_DOCUMENTATION.md`
+
+## 🏗️ Project Structure
+
 mern-final-project/
-├── client/           # React frontend
+├── server/                 # Backend
 │   ├── src/
-│   │   ├── pages/   # Login, Register, Dashboard
-│   │   ├── components/ # BugCard, BugList, BugForm
-│   │   └── App.js
+│   │   ├── models/        # Database schemas
+│   │   ├── routes/        # API routes
+│   │   ├── controllers/   # Business logic
+│   │   ├── middleware/    # Custom middleware
+│   │   └── tests/     # Test files
+│   ├── .env               # Environment variables
 │   └── package.json
 │
-├── server/          # Express backend
+├── client/                # Frontend
 │   ├── src/
-│   │   ├── routes/  # Auth, Bugs
-│   │   ├── models/  # Bug model
-│   │   ├── controllers/
-│   │   └── app.js
+│   │   ├── pages/         # Page components
+│   │   ├── components/    # Reusable components
+│   │   ├── hooks/         # Custom hooks
+│   │   ├── App.js         # Main app
+│   │   └── index.js       # Entry point
+│   ├── .env               # Environment variables
 │   └── package.json
 │
-└── README.md
-```
+├── README.md              # This file
+└── package.json
+
+## 🔐 Security Features
+
+- ✅ Password hashing with bcryptjs
+- ✅ JWT token authentication
+- ✅ CORS protection
+- ✅ Rate limiting
+- ✅ MongoDB sanitization
+- ✅ Security headers (helmet.js)
+- ✅ Input validation
+- ✅ Protected routes
 
 ## 🎓 Learning Outcomes
 
-This capstone project demonstrates:
+This project demonstrates:
+- Full-stack development with MERN
+- RESTful API design
+- Authentication & authorization
+- Database design with MongoDB
+- Testing with Jest
+- Error handling & validation
+- Security best practices
+- Responsive UI development
 
-### Backend Skills
-- ✅ RESTful API design
-- ✅ User authentication
-- ✅ MongoDB integration
-- ✅ Error handling & validation
-- ✅ Middleware implementation
+## 📸 Screenshots
 
-### Frontend Skills
-- ✅ React hooks & state management
-- ✅ Form handling & validation
-- ✅ API integration
-- ✅ Responsive design
-- ✅ Professional UI/UX
+### Login Page
+Shows user authentication interface with demo credentials
 
-### DevOps Skills
-- ✅ Git & GitHub
-- ✅ Deployment (Vercel & Render)
-- ✅ Environment management
-- ✅ CI/CD ready
+### Dashboard
+Displays all bugs with status and priority badges
 
-## 🚀 Getting Started Locally
+### Create Bug
+Form for adding new bugs to the system
 
-### Prerequisites
-- Node.js 18+
-- MongoDB (local or Atlas)
+### Bug Management
+Update and delete operations on bugs
 
-### Installation
+## 🎬 Demo Video
+
+**[Link to demo video - TBD]**
+
+The video shows:
+- User login
+- Creating bugs
+- Viewing bugs
+- Updating status
+- Filtering bugs
+- Deleting bugs
+
+## 🚀 Deployment
+
+### Backend (Render.com)
+1. Push code to GitHub
+2. Deploy to Render
+3. Set environment variables
+
+### Frontend (Vercel)
+1. Import GitHub repository
+2. Deploy to Vercel
+3. Set API URL environment variable
+
+**Live Application:** [Link - TBD]
+
+## 🐛 Troubleshooting
+
+### "Cannot connect to MongoDB"
+- Verify MongoDB connection string in `server/.env`
+- Check IP is whitelisted in MongoDB Atlas
+- Make sure MongoDB is running if using local
+
+### "Port already in use"
 ```bash
-# Install dependencies
+# Kill process on port 5000
+lsof -ti:5000 | xargs kill -9
+
+# Kill process on port 3000
+lsof -ti:3000 | xargs kill -9
+```
+
+### "npm install fails"
+```bash
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+## 📝 Available Scripts
+```bash
+# Install all dependencies
 npm run install-all
 
 # Start development servers
 npm run dev
 
-# Frontend: http://localhost:3000
-# Backend: http://localhost:5000
+# Start backend only
+npm run dev:backend
+
+# Start frontend only
+npm run dev:frontend
+
+# Run tests
+npm test
+
+# Run backend tests
+npm run test:backend
+
+# Build frontend
+npm run build
+
+# Start production server
+npm start
 ```
-
-### Environment Variables
-
-**server/.env**
-```
-MONGODB_URI=mongodb+srv://...
-NODE_ENV=development
-PORT=5000
-```
-
-**client/.env**
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
-## 📊 Capstone Requirements
-
-### ✅ Task 1: Project Planning & Design
-- Wireframes created
-- Database schema designed
-- API architecture documented
-- User stories defined
-
-### ✅ Task 2: Backend Development
-- Express.js REST API
-- Authentication system
-- Bug CRUD operations
-- MongoDB integration
-- Error handling
-
-### ✅ Task 3: Frontend Development
-- React UI with components
-- Login/Register pages
-- Dashboard with bug list
-- Real-time API calls
-- Responsive design
-
-### ✅ Task 4: Testing & Quality
-- Jest configuration
-- Unit tests
-- Component tests
-- Error handling tests
-
-### ✅ Task 5: Deployment & Documentation
-- Deployed to production
-- Vercel frontend
-- Render backend
-- Comprehensive README
-- Environment configuration
-
-## 🎯 Future Enhancements
-
-- [ ] User roles (admin, developer)
-- [ ] Bug priorities and categories
-- [ ] Comments on bugs
-- [ ] Real-time notifications
-- [ ] Advanced filtering and search
-- [ ] Analytics dashboard
 
 ## 📞 Support
 
-For issues or questions:
-1. Check the README
-2. Review error messages
-3. Check browser console (F12)
-4. Check backend logs
+For issues:
+1. Check the error message in console
+2. Review API documentation
+3. Check browser developer tools (F12)
+4. Look at server logs in terminal
 
 ## 👤 Author
 
-Mawunyo Fevlo Mary
+**Mawunyo Fevlo Mary**
+- Course: PLP MERN Stack Development
+- Week 8 Capstone Project
 
-## 📅 Project Timeline
+## 📄 License
 
-- **Started**: October 2025
-- **Completed**: November 2025
-- **Deployed**: November 2025
+MIT License - Open Source
 
-## 📜 License
+## ✅ Checklist for Submission
 
-This is an educational project for the PLP MERN Stack Development Course.
+- [x] Complete source code
+- [x] Frontend fully functional
+- [x] Backend fully functional
+- [x] Database connected
+- [x] Tests implemented
+- [x] Error handling
+- [x] Security features
+- [x] Documentation (README)
+- [ ] Screenshots
+- [ ] Demo video
+- [ ] Deployed to production
+- [ ] GitHub updated
 
 ---
 
-**Status**: ✅ Production Ready
-**Last Updated**: November 2025
+**Status:** ✅ In Development
+**Last Updated:** November 2025
